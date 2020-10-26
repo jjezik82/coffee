@@ -1,1 +1,263 @@
-@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+/* 
+===========
+Fonts
+===========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Satisfy&display=swap");
+
+/* 
+===========
+Variables
+===========
+*/
+:root {
+  --clr-primary: #895737;
+  --clr-primary-light: #c08552;
+  --clr-brown-1: #5e3023;
+  --clr-brown-5: #dab49d;
+  --clr-brown-10: #f3e9dc;
+  --clr-white: #fff;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Satisfy", cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/* more global css */
+
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  color: var(--clr-primary);
+  background: var(--clr-primary-light);
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+.section-title h3 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary);
+}
+.section-title {
+  margin-bottom: 2rem;
+}
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-cente {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
+/* 
+===========
+Animation
+===========
+*/
+
+/* 
+===========
+Navbar
+===========
+*/
+/* 
+===========
+Header
+===========
+*/
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/background.jpeg");
+  min-height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.logo {
+  background: url("../img/coffee-logo-png-7500.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 10rem;
+  min-width: 10rem;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.banner,
+h1 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-white);
+}
+.banner,
+h2 {
+  font-family: var(--ff-primary);
+  color: var(--clr-white);
+}
+.banner {
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.divider {
+  background: linear-gradient(
+    to right,
+    rgb(28, 0, 14) 0%,
+    rgb(73, 1, 2) 28%,
+    rgb(28, 0, 14) 71%,
+    rgb(48, 0, 4) 99%
+  );
+  display: block;
+  height: 0.75rem;
+}
+
+/* 
+===========
+About
+===========
+*/
+.about {
+}
+.about-txt {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.about-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .about {
+    max-width: 90vw;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+  }
+  .about-txt {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .about-img {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid var(--clr-brown-1);
+    border-radius: var(--radius);
+  }
+}
+/* 
+===========
+Products
+===========
+*/
+
+/* 
+===========
+Contact
+===========
+*/
