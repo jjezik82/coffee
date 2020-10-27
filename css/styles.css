@@ -215,6 +215,8 @@ About
 ===========
 */
 .about {
+  background-color: blue;
+  margin: 0 auto;
 }
 .about-txt {
   width: 90vw;
@@ -223,31 +225,30 @@ About
   text-align: center;
 }
 .about-img {
-  width: 100%;
+  width: 85vw;
+  margin: 0 auto;
+  border: 0.5px solid var(--clr-brown-1);
+  border-radius: var(--radius);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
   .about {
-    max-width: 90vw;
-    box-sizing: border-box;
-    display: block;
+    max-width: 95vw;
     margin: 0 auto;
   }
   .about-txt {
-    box-sizing: border-box;
-    display: block;
-    float: left;
-    width: 50%;
-    margin: 0 auto;
+    background-color: rebeccapurple;
+    max-width: 26rem;
+    margin: 2rem 4rem;
   }
   .about-img {
-    box-sizing: border-box;
-    display: block;
+    max-width: 30rem;
+    margin: 2rem 4rem;
+  }
+  .about-img,
+  .about-txt {
     float: left;
-    width: 50%;
-    margin: 0 auto;
-    border: 2px solid var(--clr-brown-1);
-    border-radius: var(--radius);
+    width: 45%;
   }
 }
 /* 
